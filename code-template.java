@@ -189,4 +189,16 @@ public static void main(String[] args) {
         out.flush();
 
     }
+    public Boolean checkRightAngled(int X1, int Y1,int X2, int Y2,int X3, int Y3){
+    int A = (int)Math.pow((X2 - X1), 2) +(int)Math.pow((Y2 - Y1), 2);
+    int B = (int)Math.pow((X3 - X2), 2) +(int)Math.pow((Y3 - Y2), 2);
+    int C = (int)Math.pow((X3 - X1), 2) +(int)Math.pow((Y3 - Y1), 2);
+    // Check Pythagoras Formula
+    if ((A > 0 && B > 0 && C > 0) && 
+        (A == (B + C) || B == (A + C) ||
+         C == (A + B)))
+        return true;
+        return false;
+}
+
 }
